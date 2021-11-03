@@ -1,0 +1,26 @@
+//code to open the site
+
+using System;
+using System.Threading;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
+
+
+    class Program
+    {
+        static void Main()
+        {
+            string url;     //can be your desired URL from the chrome browser
+            
+            IWebDriver driver = new ChromeDriver();  //Initialising the driver 
+            
+            driver.Navigate().GoToUrl( url );   //to navigate the page 
+            
+
+            Thread.Sleep(10000);      /gives a delay and see when the page opens on the chrome browser
+            
+            driver.Quit(); //to close the Chrometab
+
+        }
+
